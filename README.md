@@ -81,7 +81,7 @@ This project helped develop practical skills in:
 
 ## 👩‍💻 Developer
 
-**Kowsalya VJ**
+**Kowsalya E**
 
 BRAINY GAME is my first step into Web Game Development, combining learning, creativity and interactive technology.
 
