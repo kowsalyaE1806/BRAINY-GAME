@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brainy Game | Sparki</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="bg-orb orb-one"></div>
+<div class="bg-orb orb-two"></div>
+
+
+<!-- =====================================================
+                     HOME SCREEN
+===================================================== -->
+
+<section id="homeScreen" class="screen">
+
+    <div class="home-wrapper">
+
+        <div class="top-badge">
+            🤖 POWERED BY SPARKI AI
+        </div>
+
+        <!-- BIG HOME SPARKI -->
+
+        <div class="home-sparki-area">
+
+            <div class="energy-ring"></div>
+
+            <div class="sparki-big">
+
+                <div class="antenna">
+                    <div class="antenna-ball"></div>
+                </div>
+
+                <div class="sparki-head">
+
+                    <div class="ear ear-left"></div>
+                    <div class="ear ear-right"></div>
+
+                    <div class="eye eye-left">
+                        <span></span>
+                    </div>
+
+                    <div class="eye eye-right">
+                        <span></span>
+                    </div>
+
+                    <div class="sparki-mouth"></div>
+
+                </div>
+
+                <div class="sparki-body">
+
+                    <div class="chest-light">
+                        ⚡
+                    </div>
+
+                    <div class="chest-text">
+                        SPARKI
+                    </div>
+
+                </div>
+
+                <div class="sparki-arm left-arm"></div>
+                <div class="sparki-arm right-arm"></div>
+
+                <div class="sparki-leg left-leg"></div>
+                <div class="sparki-leg right-leg"></div>
+
+            </div>
+
+        </div>
+
+
+        <p class="small-heading">
+            WELCOME TO
+        </p>
+
+        <h1 class="game-title">
+            Brainy <span>Game</span>
+        </h1>
+
+        <p class="home-description">
+            Challenge your knowledge.<br>
+            Build your streak. Beat your best.
+        </p>
+
+
+        <!-- CATEGORY CARDS -->
+
+        <div class="category-row">
+
+            <div class="category">
+                <div class="category-icon">📜</div>
+                <b>History</b>
+                <small>Discover the past</small>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">🏛️</div>
+                <b>Politics</b>
+                <small>Know democracy</small>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">🌍</div>
+                <b>General GK</b>
+                <small>Explore the world</small>
+            </div>
+
+        </div>
+
+
+        <!-- STATS -->
+
+        <div class="home-stats">
+
+            <div>
+                <span>🔥</span>
+                <small>BEST STREAK</small>
+                <strong id="homeBest">0</strong>
+            </div>
+
+            <div class="stat-line"></div>
+
+            <div>
+                <span>🪙</span>
+                <small>COINS</small>
+                <strong id="homeCoins">0</strong>
+            </div>
+
+        </div>
+
+
+        <button id="startBtn" class="primary-button">
+
+            <span>START CHALLENGE</span>
+
+            <b>→</b>
+
+        </button>
+
+
+        <p class="bottom-note">
+            10 Questions • 3 Lives • Unlimited Fun
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+                     GAME SCREEN
+===================================================== -->
+
+<section id="gameScreen" class="screen hidden">
+
+    <div class="game-wrapper">
+
+
+        <!-- HEADER -->
+
+        <header class="game-header">
+
+            <div class="game-brand">
+
+                <div class="brand-logo">
+                    🤖
+                </div>
+
+                <div>
+                    <strong>Brainy Game</strong>
+                    <small>Sparki Challenge</small>
+                </div>
+
+            </div>
+
+
+            <div class="game-stats">
+
+                <div class="stat-box">
+                    ⭐ <span id="score">0</span>
+                </div>
+
+                <div class="stat-box coin-stat">
+                    🪙 <span id="coins">0</span>
+                </div>
+
+                <div class="stat-box streak-stat">
+                    🔥 <span id="streak">0</span>
+                </div>
+
+                <div class="stat-box level-stat">
+    🎮 <span id="level">1</span>
+</div>
+
+<div class="stat-box timer-stat">
+    ⏱️ <span id="timer">15</span>s
+</div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-section">
+
+            <div class="progress-top">
+
+                <span>
+                    QUESTION <b id="questionNumber">1</b> / 10
+                </span>
+
+                <span class="lives" id="lives">
+                    ❤️ ❤️ ❤️
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                 BIG ANIMATED SPARKI + QUESTION
+        ================================================= -->
+
+        <div class="battle-area">
+
+
+            <!-- BIG SPARKI -->
+
+            <div class="game-sparki-container">
+
+                <div class="sparki-aura"></div>
+
+                <div id="gameSparki" class="sparki-big game-sparki">
+
+                    <div class="antenna">
+                        <div class="antenna-ball"></div>
+                    </div>
+
+                    <div class="sparki-head">
+
+                        <div class="ear ear-left"></div>
+                        <div class="ear ear-right"></div>
+
+                        <div class="eye eye-left">
+                            <span></span>
+                        </div>
+
+                        <div class="eye eye-right">
+                            <span></span>
+                        </div>
+
+                        <div class="sparki-mouth"></div>
+
+                    </div>
+
+                    <div class="sparki-body">
+
+                        <div class="chest-light">
+                            ⚡
+                        </div>
+
+                        <div class="chest-text">
+                            SPARKI
+                        </div>
+
+                    </div>
+
+                    <div class="sparki-arm left-arm"></div>
+                    <div class="sparki-arm right-arm"></div>
+
+                    <div class="sparki-leg left-leg"></div>
+                    <div class="sparki-leg right-leg"></div>
+
+                </div>
+
+
+                <div id="speechBubble" class="speech-bubble">
+
+                    <b>SPARKI</b>
+
+                    <p id="sparkiComment">
+                        Let's test your brain! 🧠
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION -->
+
+            <div class="question-section">
+
+                <div class="question-card">
+
+                    <div id="category" class="question-category">
+                        HISTORY
+                    </div>
+
+                    <h2 id="question">
+                        Loading question...
+                    </h2>
+
+
+                    <div id="answers" class="answers">
+
+                    </div>
+
+
+                    <!-- POWER UP -->
+
+                    <div class="power-area">
+
+                        <button id="fiftyBtn" class="power-button">
+
+                            <span>⚡</span>
+
+                            <div>
+                                <b>50 / 50</b>
+                                <small>Remove 2 wrong answers</small>
+                            </div>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="game-tip">
+            💡 Correct answers increase your streak and coins!
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+                     RESULT SCREEN
+===================================================== -->
+
+<section id="resultScreen" class="screen hidden">
+
+    <div class="result-wrapper">
+
+        <div id="resultSparki" class="result-sparki">
+            🤖
+        </div>
+
+        <p class="small-heading">
+            CHALLENGE COMPLETE
+        </p>
+
+        <h1 id="resultTitle">
+            AMAZING!
+        </h1>
+
+        <p id="resultDescription">
+            Sparki has checked your performance.
+        </p>
+
+
+        <div class="score-card">
+
+            <small>FINAL SCORE</small>
+
+            <strong id="finalScore">
+                0 / 10
+            </strong>
+
+            <div class="final-progress">
+                <div id="finalProgress"></div>
+            </div>
+
+        </div>
+
+
+        <div class="result-grid">
+
+            <div>
+                <span>🔥</span>
+                <small>STREAK</small>
+                <strong id="finalStreak">0</strong>
+            </div>
+
+            <div>
+                <span>🪙</span>
+                <small>COINS</small>
+                <strong id="finalCoins">0</strong>
+            </div>
+
+            <div>
+                <span>🏆</span>
+                <small>LEVEL</small>
+                <strong id="finalLevel">Explorer</strong>
+            </div>
+
+        </div>
+
+
+        <div class="sparki-message">
+
+            <b>🤖 SPARKI SAYS</b>
+
+            <p id="resultMessage">
+                Keep learning!
+            </p>
+
+        </div>
+
+
+        <button id="againBtn" class="primary-button">
+
+            <span>PLAY AGAIN</span>
+
+            <b>↻</b>
+
+        </button>
+
+
+        <button id="homeBtn" class="back-button">
+            ← Back to Home
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PARTICLES -->
+
+<div id="particles"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
